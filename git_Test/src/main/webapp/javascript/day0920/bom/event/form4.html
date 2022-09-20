@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name = "form1" onsubmit = "return checkInput()">
+		<label for= "id">id</label>
+		<input id= "id" placeholder ="아이디를 입력하세요." name = "id"><br>
+		<label for ="password">password</label>
+		<input id = "password" name ="password" type ="password"><br>
+		<button type = "submit">전송 버튼</button>
+	</form>
+	<script type="text/javascript">
+		function checkInput(){
+			//아이디와 비밀번호 둘 다 입력한 경우에만 submit할 수 있도록 함수 작성
+			let form = document.form1;
+			if(!form.id.value){
+				alert("아이디를 입력하지 않았습니다.");
+				return false;
+			}
+			if (!form.password.value){
+				alert("password를 입력하지 않았습니다.");
+				return false;
+			}
+			
+			return true;
+		}
+	</script>
+</body>
+</html>

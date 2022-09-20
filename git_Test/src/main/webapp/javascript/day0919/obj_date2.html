@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body onload="tomorrow()">
+	구입날짜:
+	<input type="date" id="pdate">
+	<button onclick="checkDate()">검사</button>
+	<script>
+		function tomorrow() {
+			let today = new Date();
+			let day = today.getDate() + 1;
+			let tomo = new Date();
+			tomo.setDate(day);
+			let str = tomo.getFullYear() + "-"
+					+ ("0" + (tomo.getMonth() + 1)).slice(-2) + "-"
+					+ tomo.getDate();
+			console.log("내일::" + str);
+			document.getElementById("pdate").max = str;
+		}
+		function checkDate() {
+			let s = document.getElementById("pdate").value;
+			let pdate = new Date(s);
+
+			let diff = today.getTime() - pdate.getTime();
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+			if (days > 30) {
+				alert("교환 기한이 지났습니다.");
+			}
+		}
+	</script>
+</body>
+</html>
+

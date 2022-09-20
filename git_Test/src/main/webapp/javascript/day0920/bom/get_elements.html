@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name = "myform">
+<input type = "text" id ="target" name ="text1">
+<input type = "submit" value="제출" onclik ="process()">
+
+</form>
+<script type="text/javascript">
+	function process(){
+		//let obj = document.myform.text1;
+		//let obj = document.form[0].text1;
+		//let obj = document.form[0].elements[0];
+		let obj = doucment.getElementById("target");
+		alert(obj.vlaue);
+	}
+</script>
+</body>
+</html>

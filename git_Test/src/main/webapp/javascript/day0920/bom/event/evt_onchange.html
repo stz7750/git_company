@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+영어단어 : <input type = "text" id="name" onchange="sub()">
+<p>입력필드를 벗어나면 소문자로 변경됩니다.</p>
+영어단어 : <input type = "text" id="name2" oninput ="sub2()">
+oninput : <span id="result"></span>
+<p>input이벤트는 입력할때마다 발생한다.</p>
+<script type="text/javascript">
+	function sub(){
+		alert("sub() 실행 : change이벤트 발생");
+		let x = document.getElementById("name");
+		x.value = x.value.toLowerCase();
+	}
+	function sub2(){
+		document.querySelector("#result").innerHTML
+		= document.getElementById("name2").value;
+	}
+</script>
+</body>
+</html>

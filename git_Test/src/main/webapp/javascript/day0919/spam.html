@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+/*str에 'viagra’나 'XXX’라는 문자열이 있으면 
+ true를 반환해주는 함수 checkSpam(str)을 만들어보세요. 
+ 해당 문자열이 없으면 false를 반환하면 됩니다.
+
+ 함수는 대·소문자 관계없이 해당 단어를 걸러주어야 합니다. */
+function checkSpam(str) {
+	  let lower = str.toLowerCase();
+	  let reg1 = /viagra/;
+	  let reg2 = /x{2,}/;
+	  return reg1.test(lower) || reg2.test(lower);
+	  return lowerStr.includes('viagra') || lowerStr.includes('xxx')
+	}
+
+	alert( checkSpam('buy ViAgRA now') );   // true
+	alert( checkSpam('free xxxxx') ); //true
+	alert( checkSpam("innocent rabbit") ); // false
+</script>
+</body>
+</html>

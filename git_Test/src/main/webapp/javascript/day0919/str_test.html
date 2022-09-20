@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script>
+function input_check(){
+	let value = document.getElementById("id").value;
+	let patt = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g;
+	let temp = patt.test(value);
+	if(temp){
+		document.getElementById("id").value = "";
+		document.getElementById("msg").style.color="red";
+	}else{
+		document.getElementById("msg").style.color="black"		
+	}
+}
+</script>
+</head>
+<body>
+<input id="id"/><span id="msg">한글 입력 안됨</span><br>
+<input type="button" value="확인" onclick="input_check()">
+</body>
+</html>
+
+
+
+
+
+
+

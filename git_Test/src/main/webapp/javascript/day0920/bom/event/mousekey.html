@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div oncopy="alert('불법 복제를 예방하기 복사 기능을 막아놓았습니다!');return false">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis ultrices lacus ut dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+</div>
+
+<button id="button">Alt, Shift 키를 누른 상태에서 클릭해주세요!</button>
+
+<script>
+  button.onclick = function(event) {
+    if (event.altKey && event.shiftKey) {
+      alert('야호!');
+    }
+  };
+</script>
+
+</body>
+</html>

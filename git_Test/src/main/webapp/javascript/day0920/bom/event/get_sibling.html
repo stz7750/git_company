@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name ="myform1">
+이름 : <input type ="text" onFocus ="showMessage(this, '이름을 입력하시오')" onblur = "removeMessage(this)">
+<span></span><br>
+나이: <input type = "text" onfocus ="showMessage(this, '나이를 입력하시오.')">
+<span></span>
+주소 : <input type = "text" onfocus="showMessage(this, '주소를 입력하시오.')">
+<span></span>
+</form>
+<script type="text/javascript">
+function showMessage(input, str) {
+	//줄바꿈, 공백이 없는 경우
+	//input, nextSibling.innerHTML = str;
+	input.nextSibling.nextSibling.innerHTML = str;
+}
+function removeMessage(input){
+	input.nextSibling.nextSibling.innerHTML = "";
+}
+</script>
+</body>
+</html>

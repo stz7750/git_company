@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<H1>Form 예제</h1>
+	<br>
+	<form name="myform" action="save.html" method="post">
+		이름 : <input type="text" name="irum"> 
+		<input type="button" value="입력 확인 및 보내기" onClick="checkText()">
+	</form>
+	<script type="text/javascript">
+	function checkText(){
+		if(document.myform.irum.value){
+			document.myform.method= "get";
+			document.myform.submit();
+		}else {
+			alert("이름이 입력되지 않아 데이터를 전송하지 않았습니다.")
+		}
+	}
+	</script>
+</body>
+</html>
