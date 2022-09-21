@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<FORM ACTION="nothingcgi">
+		<H1>드라이브 선택</H1>
+		<P>
+			<INPUT TYPE="checkbox" NAME="drivea" VALUE="A"
+				onClick="clickCheck(this)"> A 드라이브<BR> 
+			<INPUT TYPE="checkbox" NAME="driveb" VALUE="B" 
+				onClick="clickCheck(this)">	B 드라이브<BR> 
+			<INPUT TYPE="checkbox" NAME="drivec" VALUE="C"
+				onClick="clickCheck(this)" CHECKED> C 드라이브 <BR> 
+			<INPUT TYPE="checkbox" NAME="drived" VALUE="D"
+			 onClick="clickCheck(this)"> D 드라이브
+		<P>
+	</FORM>
+<SCRIPT>
+	function clickCheck(box) {
+		if (box.checked == true)
+			alert(box.value + " 드라이브를 체크했습니다.");
+		else
+			alert(box.value + " 드라이브의 체크를 해제했습니다.");
+	}
+</SCRIPT>
+</body>
+</html>
