@@ -6,12 +6,15 @@
 		<script>
 $(function(){
 	$(":radio").click(function(){
-		$("label").css("font-weight","");
+		$("label").css("font-weight",""); // 전부 초기화 원래 굵기로 바꿔
 		$("label[for='"+$(this).attr("id")+"']").css("font-weight","bold");
+		// 선택한 라디오버튼과 연결된 레이블만 bold 처리함.
+		
 	});
 	$("label").click(function(){
-		$("label").css("font-weight","");
-		$(this).css("font-weight","bold");
+		$("label").css("font-weight",""); // 전부 초기화 원래 굵기로 바꿔줌.
+		$(this).css("font-weight","bold"); // 클릭 이벤트가 발생한 레이블만 bold 처리함.
+	
 	});
 });
 		</script>

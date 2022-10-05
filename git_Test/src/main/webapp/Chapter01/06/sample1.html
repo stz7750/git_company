@@ -5,8 +5,8 @@
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<style type="text/css">
 div{
-	width:300px;
-	height:300px;
+	width:600px;
+	height:600px;
 	background:red;
 	display:none;
 }
@@ -14,7 +14,7 @@ div{
 		<script>
 $(function(){
 	$("button").click(function(){
-		$("div").show("slow");
+		$("div").show(5000);
 	});
 });
 		</script>

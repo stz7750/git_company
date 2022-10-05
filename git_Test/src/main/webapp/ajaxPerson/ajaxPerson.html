@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="btn">회원정보</button>
+	<div id="info"></div>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				$.ajax({ url:"getPerson.jsp",
+						 type:"get",
+						 datatype:"json",
+						 timeout : 30000,
+						 cache : false
+				}).done(function(data){
+					for( let i in data){
+						let p = data[i];
+						$("#info").append("이름 : "+p.name+" 나이 : "+p.age+" 성별 : "+p.gender+"<br>")
+					}
+				})					
+			})//click
+		});//ready
+	
+	</script>
+</body>
+</html>

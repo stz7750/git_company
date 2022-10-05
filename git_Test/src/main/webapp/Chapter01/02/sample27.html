@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form>
+		<input type = "checkbox" id = "example" checked ="checked">example</form>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function() {
+			console.log($("#example").attr("checked"));
+			console.log($("#example").prop("checked"));
+		})
+	</script>
+</body>
+</html>

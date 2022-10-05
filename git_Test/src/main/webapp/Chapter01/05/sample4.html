@@ -7,6 +7,8 @@
 $(function(){
 	$("table tr").each(function(){
 		$(this).html("<td>"+$("th",this).text()+"는"+$("td",this).text()+"</td>");
+		// (this) :	현재 반복 회차에서 꺼내온 tr tag
+		// $("셀럭터", this) : 현재 태그의 자손 태그
 	});
 });
 		</script>

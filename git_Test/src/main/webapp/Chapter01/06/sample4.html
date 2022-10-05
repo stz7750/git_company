@@ -13,8 +13,8 @@ div{
 		</style>
 		<script>
 $(function(){
-	$("button#show").click(function(){
-		$("div:not(:animated)").show("slow");
+	$("button#show").click(function(){ // :animated 애니메이션 진행중인 태
+		$("div:not(:animated)").show(5000); // :not(:animated) 애니메이션 진행중이 아닐때만.
 	});
 	$("button#hide").click(function(){
 		$("div:not(:animated)").hide("slow");
